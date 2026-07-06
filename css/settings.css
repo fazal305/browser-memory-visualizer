@@ -1,0 +1,80 @@
+.settings-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 1rem;
+}
+
+.settings-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.setting-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.85rem;
+  border: 1px solid rgba(154, 171, 199, 0.16);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.setting-row h3 {
+  margin: 0;
+  font-size: 0.96rem;
+}
+
+.setting-row p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.export-box {
+  min-height: 260px;
+  max-height: 360px;
+  overflow: auto;
+  padding: 0.85rem;
+  border: 1px solid rgba(154, 171, 199, 0.16);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  white-space: pre-wrap;
+}
+
+.danger-zone {
+  border-color: rgba(251, 113, 133, 0.38);
+}
+
+.import-drop {
+  padding: 1rem;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.speed-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.speed-options .btn.active {
+  border-color: var(--cyan);
+  background: var(--cyan-soft);
+}
+
+@media (max-width: 980px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .setting-row {
+    grid-template-columns: 1fr;
+  }
+}

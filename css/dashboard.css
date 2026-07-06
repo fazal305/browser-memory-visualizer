@@ -1,0 +1,144 @@
+.dashboard-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin-bottom: 1rem;
+}
+
+.hero-panel {
+  position: relative;
+  min-height: 260px;
+  padding: 1.35rem;
+  overflow: hidden;
+}
+
+.hero-panel::after {
+  position: absolute;
+  right: -80px;
+  bottom: -110px;
+  width: 280px;
+  height: 280px;
+  content: "";
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, 0.18),
+    transparent 66%
+  );
+}
+
+.module-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.chart-card {
+  min-height: 260px;
+}
+
+.chart-wrap {
+  position: relative;
+  height: 190px;
+}
+
+.quick-action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.action-card {
+  display: block;
+  min-height: 160px;
+  padding: 1rem;
+  color: var(--text);
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+.action-card:hover {
+  color: var(--text);
+  border-color: var(--cyan);
+  background: var(--card-strong);
+  transform: translateY(-3px);
+}
+
+.action-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.action-card p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.action-card .action-code {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 10px;
+  background: var(--cyan-soft);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.activity-list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.activity-item {
+  padding: 0.8rem;
+  border: 1px solid rgba(154, 171, 199, 0.16);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.activity-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+
+.activity-detail {
+  margin: 0.4rem 0 0;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1180px) {
+  .dashboard-hero,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-action-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .quick-action-grid {
+    grid-template-columns: 1fr;
+  }
+}
